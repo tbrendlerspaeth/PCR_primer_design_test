@@ -14,7 +14,7 @@ def gc_clamp(seq_name, seq_identity):
     else:
          return print("GC clamp present for " + seq_name + ".")
         
-# Tm (degrees C) = 4(G+C) + 2(A+T) # global variable needed for the gc cont of each sequence??
+# Primer melting temperature, according to formula Tm = 4(G+C) + 2(A+T)
 def primer_tm(seq_name, gc_count, seq_identity):
         tm = 4*gc_count + 2*(len(seq_identity) - gc_count)
         print("The melting temperature of your " + seq_name + " is " + str(tm) + " degrees Celsius.")
